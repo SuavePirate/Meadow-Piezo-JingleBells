@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using Meadow;
 using Meadow.Devices;
@@ -51,7 +52,7 @@ namespace Suave.Meadow.JingleBells
             int[] tones = { 1915, 1700, 1519, 1432, 1275, 1136, 1014, 956 };
 
             // play the tone corresponding to the note name
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < names.Length; i++)
             {
                 if (names[i] == note)
                 {
